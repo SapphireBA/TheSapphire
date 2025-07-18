@@ -1,0 +1,254 @@
+/*===GLOBAL VARIABLES===*/
+:root {
+    --cream: #fff3e0;
+    --navy: #0f1c3f;
+    --navy-hover: #1a237e;
+    --cream-hover: #eae0c2;
+}
+
+/*===RESET DEFAULTS (איפוס לכל סגנונות ברירת המחדל של הדפדפן)===*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Assitant', sans-serif;
+}
+
+body{
+    background-color: var(--cream);
+    color: var(--navy);
+}
+
+/*===HEADER (ניווט עליון)===*/
+header{
+    display: flex;  /*מציג את הוגו והתפריט בשורה*/
+    justify-content: space-between;  /*רווח ביניהם*/
+    align-items: center;  /*מיישר אותם לגובה אמצעי*/
+    background-color: var(--navy);
+    color: var(--cream);
+    padding: 20px 40px;
+}
+
+.logo{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: bold; 
+    color: var(--cream);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a{
+    color:var(--cream);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--cream-hover);
+}
+
+.hero{
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--cream);
+}
+
+.hero h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn{
+    padding: 12px 28px;
+    background-color: var(--navy);
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: var(--navy-hover);
+}
+
+/*===FOOTER===*/
+footer{
+    background-color: var(--navy);
+    color: var(--cream);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/*===COLLECTION PAGE===*/
+.collection{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.item-card{
+    background-color: var(--cream);
+    border: 1px solid var(--navy);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.item-card h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.item-card p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.item-card .price{
+    font-weight: bold;
+    color: var(--navy);
+    font-size: 18px;
+}
+
+/*===PRODUCT PAGE===*/
+.product-detail {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.product-box {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3 / 4;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+    margin: 20px auto 40px;
+}
+
+.product-info {
+    text-align: 20px 0;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.features {
+    list-style-type: disc;
+    text-align: ;
+    margin: 0 auto;
+    max-width: 300px;
+
+}
+
+.sizes {
+    margin-bottom: 10px;
+}
+
+.size-dropdown {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--navy);
+    background-color: var(--cream);
+    color: var(--navy);
+}
+
+/*===BUTTONS===*/
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.add-to-cart, .back-button {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 12px;  /*כפתורים מעוגלים*/
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+.add-to-cart:hover {
+    background-color: var(--navy-hover);
+}
+    
+.back-button {
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+.back-button:hover {
+    background-color: var(--navy-hover);
+}
+
+.arrow{
+    margin-right: 6px;
+}
+
+/*===RESPONSIVE DESIGN===*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+}
